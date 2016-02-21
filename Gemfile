@@ -9,6 +9,10 @@ gem 'hanami-model', '~> 0.5'
 
 gem 'pg'
 
+group :development, :test do
+  gem 'pry-byebug'
+end
+
 group :test do
   gem 'rspec'
   gem 'capybara'
