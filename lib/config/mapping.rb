@@ -9,3 +9,16 @@ collection :users do
   attribute :created_at,          DateTime
   attribute :updated_at,          DateTime
 end
+
+collection :events do
+  entity     Event
+  repository EventRepository
+
+  attribute :id,          String
+  attribute :owner_id,    String
+  attribute :name,        String
+  attribute :description, String
+  attribute :tags,        PGCITextArray
+  attribute :created_at,  DateTime
+  attribute :updated_at,  DateTime
+end
