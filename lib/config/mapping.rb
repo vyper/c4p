@@ -22,3 +22,16 @@ collection :events do
   attribute :created_at,  DateTime
   attribute :updated_at,  DateTime
 end
+
+collection :talks do
+  entity     Talk
+  repository TalkRepository
+
+  attribute :id,          String
+  attribute :event_id,    String
+  attribute :author_id,   String
+  attribute :name,        String
+  attribute :description, String
+  attribute :created_at,  DateTime
+  attribute :updated_at,  DateTime
+end
