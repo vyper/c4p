@@ -10,6 +10,18 @@ collection :users do
   attribute :updated_at,          DateTime
 end
 
+collection :authentications do
+  entity     Authentication
+  repository AuthenticationRepository
+
+  attribute :id,          String
+  attribute :user_id,     String
+  attribute :uid,         String
+  attribute :provider,    String
+  attribute :created_at,  DateTime
+  attribute :updated_at,  DateTime
+end
+
 collection :events do
   entity     Event
   repository EventRepository
