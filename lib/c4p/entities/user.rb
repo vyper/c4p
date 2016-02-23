@@ -1,5 +1,12 @@
 class User
   include Hanami::Entity
+  include Hanami::Validations
 
-  attributes :email, :name, :encrypted_password, :created_at, :updated_at
+  attribute :email, type: String,
+                    presence: true,
+                    format: /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/
+  attribute :name,                type: String,   presence: true
+  attribute :encrypted_password,  type: String,   presence: true
+  attribute :created_at,          type: DateTime
+  attribute :updated_at,          type: DateTime
 end

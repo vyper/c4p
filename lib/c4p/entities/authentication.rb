@@ -1,5 +1,10 @@
 class Authentication
   include Hanami::Entity
+  include Hanami::Validations
 
-  attributes :user_id, :provider, :uid, :created_at, :updated_at
+  attribute :user_id,     type: String,   presence: true
+  attribute :provider,    type: String,   presence: true
+  attribute :uid,         type: String,   presence: true
+  attribute :created_at,  type: DateTime
+  attribute :updated_at,  type: DateTime
 end
