@@ -11,6 +11,8 @@ gem 'shoulda-hanami'
 
 gem 'pg'
 
+gem 'bcrypt'
+
 group :development, :test do
   gem 'pry-byebug'
 end
