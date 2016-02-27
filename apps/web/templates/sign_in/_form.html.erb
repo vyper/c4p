@@ -1,0 +1,26 @@
+<% if params.errors.any? %>
+  <div class="errors">
+    <h3>There was a problem with your pet</h3>
+    <ul>
+      <% params.errors.each do |error| %>
+        <li><%= error.attribute_name %> => <%= error.validation %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%=
+  form_for :user, routes.sign_in_path do
+    div do
+      label 'E-mail'
+      text_field :email
+    end
+
+    div do
+      label 'Password'
+      password_field :password
+    end
+
+    submit 'Sign in!'
+  end
+%>
