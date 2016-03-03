@@ -1,5 +1,6 @@
 require 'hanami/helpers'
 require 'hanami/assets'
+require 'omniauth-facebook'
 
 module Web
   class Application < Hanami::Application
@@ -75,6 +76,9 @@ module Web
       # See: http://www.rubydoc.info/gems/rack/Rack/Session/Cookie
       #
       sessions :cookie, secret: ENV['SESSIONS_SECRET']
+      middleware.use OmniAuth::Builder do
+        provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+      end
 
       # Configure Rack middleware for this application
       #
