@@ -1,6 +1,6 @@
-<% if errors %>
+<% if errors.any? %>
   <div class="errors">
-    <h3>There was a problem with your pet</h3>
+    <h3>There was a problem with your data</h3>
     <ul>
       <% errors.each do |error| %>
         <li><%= error.attribute_name %> => <%= error.validation %></li>
