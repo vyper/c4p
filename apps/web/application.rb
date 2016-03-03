@@ -78,6 +78,7 @@ module Web
       sessions :cookie, secret: ENV['SESSIONS_SECRET']
       middleware.use OmniAuth::Builder do
         provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+        provider :github,   ENV['GITHUB_KEY'],   ENV['GITHUB_SECRET']
       end
 
       # Configure Rack middleware for this application
