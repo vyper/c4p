@@ -2,3 +2,5 @@
 /tmp
 
 .byebug_history
+
+/.env.development
