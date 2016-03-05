@@ -17,6 +17,9 @@ gem 'bcrypt'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 
+# Front (:
+gem 'bitters'
+
 group :development, :test do
   gem 'pry-byebug'
 end

@@ -3,6 +3,13 @@ GEM
   specs:
     addressable (2.4.0)
     bcrypt (3.1.10)
+    bitters (1.2.0)
+      bourbon (>= 4.2)
+      sass (>= 3.4)
+      thor
+    bourbon (4.2.6)
+      sass (~> 3.4)
+      thor (~> 0.19)
     byebug (8.2.2)
     capybara (2.6.2)
       addressable
@@ -112,6 +119,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    sass (3.4.21)
     sequel (4.31.0)
     shotgun (0.9.1)
       rack (>= 1.0)
@@ -130,6 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  bitters
   bundler
   capybara
   hanami (= 0.7.2)
