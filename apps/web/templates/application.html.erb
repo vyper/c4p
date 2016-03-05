@@ -6,6 +6,16 @@
     <%= stylesheet "application" %>
   </head>
   <body>
+    <% if session[:logged_user_id] != nil %>
+      <%=
+        form_for :user, routes.sign_out_path, method: :delete do
+          submit 'Logout'
+        end
+      %>
+    <% else %>
+      <%= link_to 'Come on!', routes.sign_in_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
