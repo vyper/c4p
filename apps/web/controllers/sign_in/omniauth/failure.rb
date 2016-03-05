@@ -3,7 +3,7 @@ module Web::Controllers::SignIn::Omniauth
     include Web::Action
 
     def call(params)
-      # TODO flash[:notice] = 'facebook auth error'
+      flash[:error] = 'Unexpected error' # TODO i18n?
       redirect_to routes.new_sign_in_path
     end
   end

@@ -13,7 +13,7 @@ module Web::Controllers::SignIn::Omniauth
         session[:logged_user_id] = result.user.id
       end
 
-      # TODO flash[:notice] = result.message
+      flash[:success] = result.message
       redirect_to routes.public_send(result.redirect_to)
     end
   end

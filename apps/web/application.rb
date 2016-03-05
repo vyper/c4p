@@ -217,8 +217,7 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
       controller.prepare do
-        # include MyAuthentication # included in all the actions
-        # before :authenticate!    # run an authentication before callback
+        include Extensions::Controllers::Flashable
       end
 
       # Configure the code that will yield each time Web::View is included
@@ -228,6 +227,8 @@ module Web
       view.prepare do
         include Hanami::Helpers
         include Web::Assets::Helpers
+
+        include Extensions::Helpers::Flashable
       end
     end
 
