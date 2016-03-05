@@ -2,7 +2,9 @@ require_relative './ext/pg_ci_text_array'
 
 require 'hanami/model'
 require 'hanami/mailer'
+
 Dir["#{ __dir__ }/c4p/**/*.rb"].each { |file| require_relative file }
+Dir["#{ __dir__ }/extensions/**/*.rb"].each { |file| require_relative file }
 
 Hanami::Model.configure do
   ##

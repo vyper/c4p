@@ -1,5 +1,7 @@
+require 'sass'
 require 'hanami/helpers'
 require 'hanami/assets'
+require 'omniauth-facebook'
 
 module Web
   class Application < Hanami::Application
@@ -74,7 +76,11 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/rack/Rack/Session/Cookie
       #
-      # sessions :cookie, secret: ENV['SESSIONS_SECRET']
+      sessions :cookie, secret: ENV['SESSIONS_SECRET']
+      middleware.use OmniAuth::Builder do
+        provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+        provider :github,   ENV['GITHUB_KEY'],   ENV['GITHUB_SECRET']
+      end
 
       # Configure Rack middleware for this application
       #
@@ -143,7 +149,7 @@ module Web
         # See: http://hanamirb.org/guides/assets/compressors
         #
         # In order to skip stylesheet compression comment the following line
-        stylesheet_compressor :builtin
+        stylesheet_compressor :sass
 
         # Specify sources for assets
         #
@@ -211,8 +217,7 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
       controller.prepare do
-        # include MyAuthentication # included in all the actions
-        # before :authenticate!    # run an authentication before callback
+        include Extensions::Controllers::Flashable
       end
 
       # Configure the code that will yield each time Web::View is included
@@ -222,6 +227,8 @@ module Web
       view.prepare do
         include Hanami::Helpers
         include Web::Assets::Helpers
+
+        include Extensions::Helpers::Flashable
       end
     end
 

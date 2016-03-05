@@ -4,15 +4,18 @@ My first project using [Hanami](http://hanamirb.org)!
 
 ## Curious?
 
-Work in progress... But, you can follow the progress acessing [http://c4p.gurupr.org].
+Work in progress... But, you can follow the progress acessing http://c4p.gurupr.org.
 
 ## TODO
 
-- Authentication with social networks (facebook, google, twitter, github)
+- Improve layout
+- Authentication also with google and twitter
+- Ask to user when has pending password
 - User create an event
 - User proposal a talk in a event
 - User vote up or down in talk
 - User comment in a talk
+- Ok, add specs... :stuck_out_tongue_closed_eyes:
 
 ## Contributing
 

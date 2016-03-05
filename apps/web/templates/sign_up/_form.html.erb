@@ -1,0 +1,36 @@
+<% if errors.any? %>
+  <div class="errors">
+    <h3>There was a problem with your data</h3>
+    <ul>
+      <% errors.each do |error| %>
+        <li><%= error.attribute_name %> => <%= error.validation %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%=
+  form_for :user, routes.sign_up_path do
+    div do
+      label 'Name'
+      text_field :name
+    end
+
+    div do
+      label 'E-mail'
+      text_field :email
+    end
+
+    div do
+      label 'Password'
+      password_field :password
+    end
+
+    div do
+      label 'Password confirmation'
+      password_field :password_confirmation
+    end
+
+    submit 'Sign up!'
+  end
+%>
