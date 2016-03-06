@@ -13,11 +13,11 @@
       margin-bottom: 1em;
 
       &.facebook {
-        @include my-button(hsla(222, 47%, 40%, 1));
+        @include my-button($facebook-color);
       }
 
       &.github {
-        @include my-button(hsla(0, 0%, 18%, 1));
+        @include my-button($github-color);
       }
     }
   }

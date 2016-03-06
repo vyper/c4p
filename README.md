@@ -9,6 +9,7 @@ Work in progress... But, you can follow the progress acessing http://c4p.gurupr.
 ## TODO
 
 - Improve layout
+- Use [RSCSS](http://rscss.io)
 - Authentication also with google and twitter
 - Ask to user when has pending password
 - User create an event
