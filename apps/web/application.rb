@@ -228,6 +228,7 @@ module Web
         include Hanami::Helpers
         include Web::Assets::Helpers
 
+        include Extensions::Helpers::BodyClassiable
         include Extensions::Helpers::Flashable
       end
     end

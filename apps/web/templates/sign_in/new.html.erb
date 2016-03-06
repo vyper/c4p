@@ -1,22 +1,11 @@
-<ul>
-  <li>
-    <%= link_to 'entrar com facebook', '/auth/facebook' %>
-  </li>
-  <li>
-    <%= link_to 'entrar com github', '/auth/github' %>
-  </li>
-  <li>
-    entrar com twitter
-  </li>
-  <li>
-    entrar com google
-  </li>
-</ul>
+<div class='sign-in'>
+  <%= render partial: 'sign_in/social_networks' %>
 
-<p>or</p>
+  <p>or</p>
 
-<%= render partial: 'form' %>
+  <%= render partial: 'form' %>
 
-<p>or</p>
+  <p>or</p>
 
-<%= render partial: 'sign_up/form' %>
+  <%= link_to 'Sign up!', routes.sign_up_path %>
+</div>

@@ -1,1 +1,11 @@
-<%= render partial: 'form' %>
+<div class='sign-up'>
+  <%= render partial: 'sign_in/social_networks' %>
+
+  <p>or</p>
+
+  <%= render partial: 'form' %>
+
+  <p>or</p>
+
+  <%= link_to 'Sign in!', routes.sign_in_path %>
+</div>

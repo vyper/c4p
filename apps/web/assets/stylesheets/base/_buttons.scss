@@ -1,6 +1,6 @@
-#{$all-buttons} {
+@mixin my-button($base-color) {
   appearance: none;
-  background-color: $action-color;
+  background-color: $base-color;
   border: 0;
   border-radius: $base-border-radius;
   color: #fff;
@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: shade($base-color, 20%);
     color: #fff;
   }
 
@@ -29,7 +29,11 @@
     opacity: 0.5;
 
     &:hover {
-      background-color: $action-color;
+      background-color: $base-color;
     }
   }
+}
+
+#{$all-buttons} {
+  @include my-button($action-color);
 }

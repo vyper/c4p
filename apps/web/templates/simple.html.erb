@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web</title>
+    <%= favicon %>
+    <%= stylesheet "application" %>
+  </head>
+  <body class='<%= body_class %>'>
+    <div class='container'>
+      <%= flash_message %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
