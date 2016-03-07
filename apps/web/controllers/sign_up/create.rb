@@ -18,7 +18,11 @@ module Web::Controllers::SignUp
       @result = @interactor.new(params: params).call
       @user = @result.user
 
-      # TODO Redirect
+      if @result.success?
+        flash[:success] = 'You have signed up successfully' # TODO i18n?
+        session[:logged_user_id] = @result.user.id
+        redirect_to routes.root_path
+      end
     end
 
     # TODO DRY
@@ -27,6 +31,8 @@ module Web::Controllers::SignUp
         params.errors
       elsif @result.errors.any?
         @result.errors
+      else
+        []
       end
     end
   end

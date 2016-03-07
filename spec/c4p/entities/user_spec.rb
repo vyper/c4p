@@ -12,7 +12,6 @@ RSpec.describe User do
   it { is_expected.to_not allow_value('vypermanehorg').for(:email) }
 
   it { is_expected.to validate_presence_of(:password) }
-  it { is_expected.to coerce_attribute(:password).to(String) }
 
   it { is_expected.to coerce_attribute(:created_at).to(DateTime) }
 

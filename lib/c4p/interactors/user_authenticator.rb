@@ -12,7 +12,7 @@ class UserAuthenticator
 
   def call
     @user = @repository.find_by_email(@params.get('user.email'))
-byebug
+
     if !(@user && @user.password == @params.get('user.password'))
       error! 'Invalid e-mail or password'
     end
