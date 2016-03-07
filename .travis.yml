@@ -1,0 +1,16 @@
+addons:
+  postgresql: '9.3'
+before_script:
+- psql -c 'create database c4p_test;' -U postgres
+- bundle exec hanami db migrate
+script:
+- bundle exec rake spec
+rvm:
+- 2.3.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: cYaJ0V+yLSzhL9Spmg3vHExKs2uTBMjf69LWVzq+QBqP+h1AwMEOWXNHQ8zHjm4i4LtZ2hLvTdKolkgeZ06XfdNEKW8mWdcRREhl3AWrv32ZlRbV5kc0IYL7QlVGFHJDqpQ2KcLz4bD2MojK72HhOatjISUjaU8hDNgnQJu8N8uyoEuPUzVqv3z7oscbj6lH3/QcUFgZPkcVMoa8b3Bg33qBFOs+x6P2VSZDmUsTzUjGBylw6x7vKXXpKyvtRLa4gopcm4JzlSF3M6x4fWzUReL+5AJO6hr7kDsgjEXcyzvU/+1zC5B9wkFsWTl3P35CpqVZ4ZS6YTKuJEg5i7N/JyN70GrZWDtXjnukKkWEUFSte6awRCqebRzZ5/y44hy2zAGr2LYjv9oJTXYUekvyQv1697u0ZBFeMYqrMCd1hU+ANJNVgO0kseaZai5SaTdBEWOvOEPCELOY/xbrHIN58vH7VJwOAIl78TEzazaC9EywSGue0GIdLZdTWJNXp1Lo5xVaX+hdSnp8XY3O8sW2dRqvFuLCpGMUmOk+4zy38rSCfEhbhLobhxVF+Q5NPUzq848BJm8LssT0mTfpVWQUtF8fPLF60TugWdgtceCh2zfCevJGNcalAn/IcvvH9Chggp+V2EWcra8Pg7dKSp6iFCVXF6km2zTBkzHbw0+T1C8=
+  app: c4p
+  on:
+    repo: vyper/c4p
