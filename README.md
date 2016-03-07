@@ -1,4 +1,4 @@
-# c4p - call for papers [![Build Status](https://travis-ci.org/vyper/c4p.svg?branch=master)](https://travis-ci.org/vyper/c4p)
+# c4p - call for papers [![Build Status](https://travis-ci.org/vyper/c4p.svg?branch=master)](https://travis-ci.org/vyper/c4p) [![Dependency Status](https://gemnasium.com/vyper/c4p.svg)](https://gemnasium.com/vyper/c4p)
 
 My first project using [Hanami](http://hanamirb.org)!
 
