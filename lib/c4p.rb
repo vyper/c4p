@@ -1,3 +1,4 @@
+require_relative './ext/encrypted_password'
 require_relative './ext/pg_ci_text_array'
 
 require 'hanami/model'
