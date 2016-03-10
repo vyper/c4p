@@ -1,0 +1,14 @@
+.social-network-button {
+  @extend .button;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+
+  &.-facebook {
+    @include colored-button($facebook-color);
+  }
+
+  &.-github {
+    @include colored-button($github-color);
+  }
+}

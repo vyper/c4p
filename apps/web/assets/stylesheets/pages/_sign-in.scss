@@ -6,19 +6,5 @@
       @include span-columns(4);
       @include shift(4);
     }
-
-    .social-networks a {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 1em;
-
-      &.facebook {
-        @include my-button($facebook-color);
-      }
-
-      &.github {
-        @include my-button($github-color);
-      }
-    }
   }
 }
