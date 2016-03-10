@@ -1,4 +1,4 @@
-# c4p - call for papers [![Build Status](https://travis-ci.org/vyper/c4p.svg?branch=master)](https://travis-ci.org/vyper/c4p) [![Dependency Status](https://gemnasium.com/vyper/c4p.svg)](https://gemnasium.com/vyper/c4p)
+# c4p - call for papers [![Build Status](https://travis-ci.org/vyper/c4p.svg?branch=master)](https://travis-ci.org/vyper/c4p) [![Codacy Badge](https://api.codacy.com/project/badge/grade/40ed331cd0a841559b20af198428397b)](https://www.codacy.com/app/vyper/c4p) [![Dependency Status](https://gemnasium.com/vyper/c4p.svg)](https://gemnasium.com/vyper/c4p)
 
 My first project using [Hanami](http://hanamirb.org)!
 
