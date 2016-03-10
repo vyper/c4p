@@ -1,4 +1,4 @@
-module Web::Views::SignUp
+module Web::Views::ComeOn
   class New
     include Web::View
 

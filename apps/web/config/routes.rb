@@ -1,6 +1,8 @@
 # Configure your routes here
 # See: http://www.rubydoc.info/gems/hanami-router/#Usage
 
+get     '/come-on',   to: 'come_on#new',      as: :come_on
+
 get     '/sign-in',   to: 'sign_in#new',      as: :new_sign_in
 post    '/sign-in',   to: 'sign_in#create',   as: :sign_in
 delete  '/sign-out',  to: 'sign_in#destroy',  as: :sign_out
