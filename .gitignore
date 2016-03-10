@@ -4,3 +4,5 @@
 .byebug_history
 
 /.env.development
+
+/coverage*
