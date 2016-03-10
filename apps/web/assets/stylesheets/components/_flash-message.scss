@@ -1,0 +1,26 @@
+.flash-message {
+  display: block;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+  text-align: center;
+
+  &.-alert {
+    background-color: $alert-color;
+    color: darken($alert-color, 60%);
+  }
+
+  &.-error {
+    background-color: $error-color;
+    color: darken($error-color, 60%);
+  }
+
+  &.-notice {
+    background-color: $notice-color;
+    color: darken($notice-color, 60%);
+  }
+
+  &.-success {
+    background-color: $success-color;
+    color: darken($success-color, 60%);
+  }
+}

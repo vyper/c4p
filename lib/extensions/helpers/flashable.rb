@@ -10,10 +10,8 @@ module Extensions
           TYPES.each do |type|
             next if !flash[type]
 
-            div class: "flash-#{type}" do
-              span do
-                flash[type]
-              end
+            div class: "flash-message -#{type}" do
+              flash[type]
             end
           end
         end
