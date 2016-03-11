@@ -3,7 +3,9 @@
 @import "base/base";
 
 @import "colors";
-@import "flash";
+
+@import "components/social-network-button";
+@import "components/flash-message";
 
 @import "pages/come-on";
 @import "pages/sign-in";
