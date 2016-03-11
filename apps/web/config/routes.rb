@@ -14,3 +14,7 @@ get  '/sign-up', to: 'sign_up#new',     as: :new_sign_up
 post '/sign-up', to: 'sign_up#create',  as: :sign_up
 
 get  '/',        to: 'events#index',    as: :root
+
+namespace :settings do
+  resource :profile, controller: 'settings/profile', only: [:show, :update]
+end
