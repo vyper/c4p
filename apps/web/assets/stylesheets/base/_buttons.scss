@@ -1,4 +1,4 @@
-.button {
+%button {
   appearance: none;
   border: 0;
   border-radius: $base-border-radius;
@@ -40,6 +40,6 @@
 }
 
 #{$all-buttons} {
-  @extend .button;
+  @extend %button;
   @include colored-button($action-color);
 }
