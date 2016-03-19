@@ -20,11 +20,11 @@ gem 'omniauth-github'
 # Front (:
 gem 'bitters'
 
-# Coverage
-gem 'codacy-coverage', require: false
-
 group :development, :test do
   gem 'pry-byebug'
+
+  # Coverage
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :test do
