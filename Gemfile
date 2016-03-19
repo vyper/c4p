@@ -22,6 +22,9 @@ gem 'bitters'
 
 group :development, :test do
   gem 'pry-byebug'
+
+  # Coverage
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :test do
