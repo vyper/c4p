@@ -18,3 +18,5 @@ get  '/',        to: 'events#index',    as: :root
 namespace :settings do
   resource :profile, controller: 'settings/profile', only: [:show, :update]
 end
+
+resources :events, only: [:new, :create]

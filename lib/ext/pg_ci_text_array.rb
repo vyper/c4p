@@ -4,6 +4,7 @@ require 'hanami/model/coercer'
 
 class PGCITextArray < Hanami::Model::Coercer
   def self.dump(value)
+    return nil if value.nil?
     ::Sequel.pg_array(value, :citext)
   end
 
