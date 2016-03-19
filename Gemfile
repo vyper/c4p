@@ -20,9 +20,6 @@ gem 'omniauth-github'
 # Front (:
 gem 'bitters'
 
-# Coverage
-gem 'codacy-coverage', require: false
-
 group :development, :test do
   gem 'pry-byebug'
 end
