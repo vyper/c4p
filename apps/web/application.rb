@@ -217,6 +217,7 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
       controller.prepare do
+        include Extensions::Controllers::Authenticable
         include Extensions::Controllers::Flashable
       end
 

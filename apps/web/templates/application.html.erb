@@ -7,6 +7,7 @@
   </head>
   <body>
     <% if session[:logged_user_id] != nil %>
+      <%= link_to 'Profile', routes.settings_profile_path %>
       <%=
         form_for :user, routes.sign_out_path, method: :delete do
           submit 'Logout'

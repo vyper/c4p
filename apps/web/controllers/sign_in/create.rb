@@ -16,9 +16,7 @@ module Web::Controllers::SignIn
       result = @interactor.new(params: params).call
 
       if result.success?
-        flash[:success] = 'Signed in successfully' # TODO i18n?
-        session[:logged_user_id] = result.user.id
-        redirect_to routes.root_path
+        sign_in_and_redirect(result.user)
       else
         flash[:error] = result.error
         redirect_to routes.new_sign_in_path
