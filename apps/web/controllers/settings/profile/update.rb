@@ -7,8 +7,10 @@ module Web::Controllers::Settings
 
       params do
         param :user do
-          param :name,  presence: true
-          param :email, presence: true
+          param :name,              presence: true
+          param :email,             presence: true
+          param :password,          confirmation: true
+          param :current_password,  presence: true
         end
       end
 

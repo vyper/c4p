@@ -21,6 +21,21 @@
       text_field :email, value: user.email
     end
 
+    div do
+      label 'Password'
+      password_field :password
+    end
+
+    div do
+      label 'Password confirmation'
+      password_field :password_confirmation
+    end
+
+    div do
+      label 'Current password'
+      password_field :current_password
+    end
+
     submit 'Update profile!'
   end
 %>
