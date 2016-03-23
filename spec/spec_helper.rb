@@ -1,6 +1,9 @@
 # Require this file for unit tests
 ENV['HANAMI_ENV'] ||= 'test'
 
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 require_relative '../config/environment'
 Hanami::Application.preload!
 
