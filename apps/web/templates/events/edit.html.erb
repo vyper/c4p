@@ -1,0 +1,28 @@
+<h1>Events > <%= event.name %></h1>
+
+<% if params.errors.any? %>
+  <div class="errors">
+    <h3>There was a problem with your event</h3>
+    <ul>
+      <% params.errors.each do |error| %>
+        <li><%= error.attribute_name %> => <%= error.validation %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%=
+  form_for :event, routes.event_path(event.id), method: :patch do
+    div do
+      label 'Name'
+      text_field :name, value: event.name
+    end
+
+    div do
+      label 'Description'
+      text_area :description, event.description
+    end
+
+    submit 'Update!'
+  end
+%>
