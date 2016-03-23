@@ -10,6 +10,8 @@ class PGCITextArray < Hanami::Model::Coercer
 
   def self.load(value)
     return nil if value.nil?
+    return value if value.is_a? ::Sequel::Postgres::PGArray
+
     ::Sequel::Postgres::PGArray::Parser.new(value).parse
   end
 end
